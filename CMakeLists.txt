@@ -22,13 +22,4 @@ set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)
 
-# target_compile_options(cpp20 PRIVATE "/std:c++latest")
 target_compile_options(cpp20 PRIVATE "/experimental:module")
-# target_compile_options(cpp20 PRIVATE "/EHsc")
-# if(CMAKE_BUILD_TYPE STREQUAL "Release")
-#     target_compile_options(cpp20 PRIVATE "/MD")
-# else()
-#     target_compile_options(cpp20 PRIVATE "/MDd")
-# endif()
-
-string(REPLACE "/fp:precise" "" CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS})

@@ -52,6 +52,9 @@
         "span": "cpp",
         "vector": "cpp",
         "generator": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "iomanip": "cpp",
+        "xlocmon": "cpp",
+        "xloctime": "cpp"
     }
 }

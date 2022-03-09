@@ -9,8 +9,11 @@ export module Utils.Numbers;
 
 export {
 
+template<typename T>
+concept number = std::is_integral_v<T> || std::is_floating_point_v<T>;
+
 template<typename T> requires std::is_integral_v<T>
-bool is_power_of_two(T x) {
+bool is_power_of_two(const T& x) {
     return x && !(x & (x - 1));
 }
 
