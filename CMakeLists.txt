@@ -16,7 +16,7 @@ add_executable(cpp20
     generators.ixx
     hello.ixx
     pmrhelper.ixx
-    move_semantics.cpp
+    move_semantics.ixx
 )
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})

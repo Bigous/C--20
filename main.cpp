@@ -17,14 +17,13 @@
 
 #include <memory_resource>
 
-#include "move_semantics.hpp"
-
 // import std.core; // needs /MD /EHsc /std:c++latest /experimental:module ...
 
 import Utils.Numbers;
 import helloworld;
 import Utils.Generators;
 import Utils.Pmr;
+import Playground.MoveSemantics;
 
 auto dice() {
   static std::uniform_int_distribution<int> distr{1, 6};
