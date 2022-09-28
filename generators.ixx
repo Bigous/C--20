@@ -1,6 +1,7 @@
 module;
 
 #include <experimental/generator>
+#include <stdexcept>
 
 export module Utils.Generators;
 
@@ -9,7 +10,10 @@ namespace utils { namespace generators {
 
 // Lambda mutation is acctually a function call from c++14.
 auto fibonacci() {
-    return [i=1,y=1] () mutable {
+    return [i=1ULL,y=1ULL] () mutable {
+        if(y < i) {
+            throw std::runtime_error("fibonacci: last iteration reached");
+        }
         auto ret = i;
         i = y;
         y += ret;
