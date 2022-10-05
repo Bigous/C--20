@@ -1,0 +1,26 @@
+BasedOnStyle: LLVM
+UseTab: AlignWithSpaces
+IndentWidth: 2
+TabWidth: 2
+BreakBeforeBraces: Linux
+AllowShortIfStatementsOnASingleLine: false
+IndentCaseLabels: true
+ColumnLimit: 120
+NamespaceIndentation: All
+AlignArrayOfStructures: Right
+AlignConsecutiveDeclarations: true
+AlignConsecutiveAssignments: true
+AlignEscapedNewlines: Left
+Standard: Latest
+SpacesInParentheses: true
+SpacesInAngles: true
+SpaceBeforeSquareBrackets: false
+SpaceBeforeRangeBasedForLoopColon: false
+SpaceBeforeParens: Never
+SpaceBeforeInheritanceColon : true
+SpaceBeforeCtorInitializerColon : true
+SpaceBeforeCaseColon: false
+SpaceBeforeAssignmentOperators: true
+PointerAlignment: Right
+ReferenceAlignment: Right
+SortUsingDeclarations: true
