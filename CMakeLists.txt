@@ -30,7 +30,7 @@ message(STATUS "Generating ${GENERATED_FILES_DIR}")
 target_compile_options(cpp20
     PRIVATE
     /experimental:module
-    /ifcSearchDir"R:\\Richard\\src\\playground\\c++\\C++20\\build"
+    /ifcSearchDir"R:\\Richard\\src\\playground\\c++\\C++20\\build\\cpp20.dir"
 )
 
 # find_package(OpenSSL REQUIRED)

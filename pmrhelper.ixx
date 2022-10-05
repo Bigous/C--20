@@ -1,16 +1,18 @@
-#include <utility>
+module;
+
 #include <memory_resource>
+#include <utility>
 
 export module Utils.Pmr;
 
 export {
 
-template <typename Container, typename... Values>
-auto create_container(std::pmr::memory_resource *resource, Values&&... values) {
-  Container result{resource};
-  result.reserve(sizeof...(values));
-  (result.emplace_back(std::forward<Values>(values)),...);
-  return result;
-}
-
+  template <typename Container, typename... Values>
+  auto create_container(std::pmr::memory_resource * resource,
+                        Values && ...values) {
+    Container result{resource};
+    result.reserve(sizeof...(values));
+    (result.emplace_back(std::forward<Values>(values)), ...);
+    return result;
+  }
 }

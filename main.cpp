@@ -191,11 +191,14 @@ int main(int, char **) {
   //             << std::endl;
 
   std::array<std::uint8_t, 1024> buffer{};
-  std::pmr::monotonic_buffer_resource mem_resource(buffer.data(), buffer.size());
+  std::pmr::monotonic_buffer_resource mem_resource(buffer.data(),
+                                                   buffer.size());
 
-  auto vet = create_container<std::pmr::vector<std::pmr::string>>(&mem_resource, "Hello", "World", "Hello Long String", "Another Long String");
+  auto vet = create_container<std::pmr::vector<std::pmr::string>>(
+      &mem_resource, "Hello", "World", "Hello Long String",
+      "Another Long String");
 
-  for(const auto &str : vet) {
+  for (const auto &str : vet) {
     std::cout << str << std::endl;
   }
 
